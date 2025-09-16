@@ -70,6 +70,11 @@
     .about-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
     .about-thumb{width:100%;height:110px;object-fit:cover;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.12)}
 
+    /* Leadership */
+    .leadership-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+    .leader-photo{width:100%;height:420px;object-fit:cover;border-radius:16px;box-shadow:0 12px 30px rgba(0,0,0,.18);background:#eee}
+    .leadership-content{font-size:1.1rem;line-height:1.8}
+
     /* VMV */
     .vmv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:2rem}
     .vmv-card{background:#fff;padding:2rem;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.1);text-align:center;transition:.3s;border-top:4px solid #1a237e}
@@ -87,7 +92,7 @@
     .ministry-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:15px;backdrop-filter:blur(10px);overflow:hidden;transition:.3s}
     .ministry-card:hover{transform:translateY(-5px);background:rgba(255,255,255,.2)}
     .ministry-photo{width:100%;height:180px;object-fit:cover;display:block;object-position:center}
-    /* Important: keep the pastor's head visible */
+    /* Keep the pastor's head visible */
     .ministry-card.pastoral .ministry-photo{object-position:center top}
 
     .ministry-card h3{margin:1rem 1rem .5rem;font-size:1.15rem}
@@ -100,6 +105,16 @@
     .contact-info:hover{background:rgba(139,69,19,.25);transform:translateY(-5px);box-shadow:0 20px 45px rgba(139,69,19,.3)}
     .contact-item{display:flex;align-items:center;margin-bottom:1.5rem;padding:1rem;background:#f8f9fa;border-radius:10px}
     .contact-icon{font-size:1.5rem;color:#1a237e;margin-right:1rem;width:40px}
+    .service-times{margin-top:1rem;background:#f8f9fa;padding:1rem;border-radius:10px}
+    .service-times h4{margin-bottom:.5rem;color:#1a237e}
+    .service-times ul{list-style:disc;padding-left:1.25rem}
+    .service-times li{margin:.25rem 0}
+
+    /* Partner card styles (3rd column on larger screens) */
+    .partner-card{background:rgba(26,35,126,.08);border:1px solid rgba(26,35,126,.2);padding:2rem;border-radius:15px;box-shadow:0 12px 28px rgba(26,35,126,.15)}
+    .partner-card h3{color:#1a237e;margin-bottom:.75rem}
+    .quote{font-style:italic;margin:.5rem 0 1rem}
+    .bank{background:#fff;border:1px dashed #1a237e;padding:1rem;border-radius:10px;line-height:1.8}
 
     footer{background:#1a237e;color:#fff;text-align:center;padding:2rem 0}
     .footer-content{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
@@ -112,6 +127,9 @@
     .fade-in.visible{opacity:1;transform:translateY(0)}
 
     /* Responsive */
+    @media (max-width:992px){
+      .leadership-grid{grid-template-columns:1fr;gap:2rem}
+    }
     @media (max-width:768px){
       .nav-links{display:none}
       .menu-toggle{display:block}
@@ -138,6 +156,7 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#leadership">Leadership</a></li>
         <li><a href="#vision">Vision</a></li>
         <li><a href="#ministries">Ministries</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -149,6 +168,7 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#leadership">Leadership</a></li>
         <li><a href="#vision">Vision</a></li>
         <li><a href="#ministries">Ministries</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -173,7 +193,7 @@
         <h2 class="section-title fade-in">About Our Ministry</h2>
         <div class="about-grid">
           <div class="about-content fade-in">
-            <p>One Christ Ministry (OCM) is a religious organization based in Mamelodi East, Phumulong Extension 6, South Africa. Founded in 2019 by Reverend Bafana Vivian Radebe and Pastor Thembeni Margaret Radebe, our church was established to empower and build One Christian Community.</p><br>
+            <p>One Christ Ministry (OCM) is a religious organization based in Mamelodi East, Phomolong Extension 6, South Africa. Founded in 2019 by Reverend Bafana Vivian Radebe and Pastor Thembeni Margaret Radebe, our church was established to empower and build One Christian Community.</p><br>
             <p>We serve the body of Christ through Evangelism, Discipleship, Teaching and Developing Leaders. Our foundation is built on the vision Rev. B.V. Radebe received in 2015 - to empower disadvantaged communities through the word of God.</p><br>
             <p><strong>One Christ Ministry is You, and You are One Christ Ministry!</strong> Together, we are the authors of this incredible story, for God's glory!</p>
           </div>
@@ -184,6 +204,24 @@
               <img class="about-thumb" src="OCM Open Air Service.jpg" alt="Open air service">
               <img class="about-thumb" src="Woman Fellowship.jpg" alt="Women fellowship">
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section id="leadership" class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">Leadership</h2>
+        <div class="leadership-grid">
+          <div class="fade-in">
+            <!-- Replace src with your leadership image file -->
+            <img class="leader-photo" src="OCM.jpg" alt="Reverend Bafana Vivian Radebe & Reverend Margaret Thembeni Radebe">
+          </div>
+          <div class="leadership-content fade-in">
+            <p><strong>Reverend Bafana Vivian Radebe</strong> &amp; <strong>Reverend Margaret Thembeni Radebe</strong> are Founders and Lead Pastors of One Christ Ministry (OCM). The ministry has been existing in Phomolong Community for more than Six (6) years.</p><br>
+            <p>Rev. B.V. Radebe holds an MSc (Watercare) from the Tshwane University of Technology (TUT), and is experienced in Business Development, Project Management and Research &amp; Development with a demonstrated history of working in the Research and Innovation Industry. He is skilled in technology development and implementation, and is currently pursuing PhD studies in Veterinary Science at the University of Pretoria.</p><br>
+            <p>Rev. M.T. Radebe holds a National Certificate in Auxiliary Nursing from Ekufundeni Nursing College and has more than 20 years’ working experience as a medical theatre specialist in both private and public hospitals. Both Rev. B.V. Radebe &amp; Rev. M.T. Radebe hold a National Higher Certificate in Theology from Hebron Theological College.</p>
           </div>
         </div>
       </div>
@@ -209,12 +247,11 @@
       <div class="container">
         <h2 class="section-title fade-in">Our Ministries</h2>
         <div class="ministries-grid">
-         <div class="ministry-card fade-in pastoral">
-  <img class="ministry-photo" src="Pastor Preaching.jpg" alt="Pastoral preaching">
-  <h3>Pastoral Ministry</h3>
-  <p>Guiding the spiritual affairs of One Christ Ministry with wisdom and love.</p>
-</div>
-
+          <div class="ministry-card fade-in pastoral">
+            <img class="ministry-photo" src="Pastor Preaching.jpg" alt="Pastoral preaching">
+            <h3>Pastoral Ministry</h3>
+            <p>Guiding the spiritual affairs of One Christ Ministry with wisdom and love.</p>
+          </div>
 
           <div class="ministry-card fade-in">
             <img class="ministry-photo" src="Kids Kingdom Movie Afternoon.jpg" alt="Kids Kingdom activities">
@@ -272,21 +309,52 @@
       <div class="container">
         <h2 class="section-title fade-in">Contact Us</h2>
         <div class="contact-grid">
+          <!-- Card 1 -->
           <div class="contact-info fade-in">
             <h3>Get in Touch</h3>
             <p>We would love to hear from you. Reach out to us for more information about our services or to join our community.</p>
-            <div class="contact-item"><div class="contact-icon">📍</div><div><strong>Address:</strong><br>Mamelodi East, Phumulong Extension 6<br>Pretoria, South Africa</div></div>
-            <div class="contact-item"><div class="contact-icon">📧</div><div><strong>Email:</strong><br>info@onechristministry.org.za</div></div>
-            <div class="contact-item"><div class="contact-icon">📞</div><div><strong>Phone:</strong><br>+27 83 564 922<br>+27 83 564 9261</div></div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div><strong>Address:</strong><br>Mamelodi East, Phomolong Extension 6<br>Pretoria, South Africa</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div><strong>Email:</strong><br>info@onechristministry.org.za</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div><strong>Phone:</strong><br>+27 83 564 9262<br>+27 83 564 9261</div>
+            </div>
           </div>
 
+          <!-- Card 2 with VERTICAL service times -->
           <div class="contact-info fade-in">
             <h3>Join Our Community</h3>
-            <p>Whether you're seeking spiritual guidance, looking to serve in ministry, or simply want to be part of a loving Christian community, we welcome you with open arms.</p><br>
-            <p><strong>Service Times:</strong></p>
-            <p>Sunday Services: Please contact us for current service times and special events.</p><br>
-            <p><strong>Company Registration:</strong> 2019/349423/08</p>
+            <p>Whether you're seeking spiritual guidance, looking to serve in ministry, or simply want to be part of a loving Christian community, we welcome you with open arms.</p>
+            <div class="service-times" aria-labelledby="serviceTimesTitle">
+              <h4 id="serviceTimesTitle">Sunday Service Times</h4>
+              <ul>
+                <li><strong>Prayer Session:</strong> 09:00 AM</li>
+                <li><strong>Praise &amp; Worship:</strong> 10:00 AM</li>
+                <li><strong>Sermon:</strong> 11:00 AM</li>
+              </ul>
+            </div>
+            <br>
+            <p><strong>NPC Registration:</strong> 2019/349423/08</p>
             <p><strong>NPO Registration:</strong> NPO-25/490018</p>
+          </div>
+
+          <!-- Card 3: Partner with us (now visible) -->
+          <div class="partner-card fade-in">
+            <h3>Partner With Us</h3>
+            <p class="quote">“…so let him give; not reluctantly, or under compulsion: for God loves a cheerful giver.” – 2 Cor. 9:7</p>
+            <p>We believe that giving is a gift from God. Through your generosity we are able to build and empower our world and nurture spiritual growth. Your giving makes a difference. Thank you for partnering with us in this journey of faith and service.</p>
+            <div class="bank" role="group" aria-label="Bank Details">
+              <p><strong>Bank Name:</strong> Nedbank</p>
+              <p><strong>Account Name:</strong> One Christ Ministry</p>
+              <p><strong>Account Number:</strong> 1277485194</p>
+              <p><strong>Branch Code:</strong> 198765</p>
+            </div>
           </div>
         </div>
       </div>
@@ -297,7 +365,7 @@
     <div class="container">
       <div class="footer-content">
         <div>
-          <p>&copy; 2024 One Christ Ministry. All rights reserved.</p>
+          <p>&copy; 2025 One Christ Ministry. All rights reserved.</p>
           <p>Founded by Rev. B.V. Radebe &amp; Pastor T.M. Radebe</p>
         </div>
         <div class="motto">"A candle does not lose anything by lighting another candle"</div>
